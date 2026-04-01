@@ -1,0 +1,51 @@
+/* Glassmorphism styling */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Primary glowing button */
+.btn-primary {
+    background: linear-gradient(135deg, #ec4899 0%, #a855f7 100%);
+}
+
+/* Smooth screen transitions */
+.screen-active {
+    display: block;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-spin-slow {
+    animation: spin 3s linear infinite;
+}
+
+/* Floating Background Hearts */
+.floating-heart {
+    position: absolute;
+    bottom: -10%;
+    font-size: 1.5rem;
+    color: rgba(255, 192, 203, 0.3);
+    animation: floatUp linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(0.8) rotate(0deg);
+        opacity: 0;
+    }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% {
+        transform: translateY(-120vh) scale(1.2) rotate(360deg);
+        opacity: 0;
+    }
+}
